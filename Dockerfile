@@ -2,7 +2,7 @@ FROM golang:1.16-alpine
 # create a working directory
 WORKDIR /go/src/app
 # Download Go modules
-COPY go.mod .
+COPY src/ .
 RUN go mod download
 # add source code
 ADD src src
